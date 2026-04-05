@@ -5,7 +5,7 @@ const CONFIG = {
   MAGZINE_HOME_BUTTON_URL: '/about',
   MAGZINE_HOME_BUTTON_TEXT: '了解更多',
 
-  MAGZINE_HOME_HIDDEN_CATEGORY: '分享杂文', //不希望在首页展示的文章分类，用英文逗号隔开
+  MAGZINE_HOME_HIDDEN_CATEGORY: '', //不希望在首页展示的文章分类，用英文逗号隔开
 
   MAGZINE_HOME_TITLE: '立即开创您的在线业务。完全免费。',
   MAGZINE_HOME_DESCRIPTION:
