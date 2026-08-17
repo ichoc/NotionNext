@@ -1,7 +1,7 @@
 import LazyImage from '@/components/LazyImage'
-import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import BannerItem from './BannerItem'
+import CONFIG from '../config'
 
 /**
  * 全宽
@@ -10,7 +10,7 @@ import BannerItem from './BannerItem'
  */
 export default function BannerFullWidth() {
   const { siteInfo } = useGlobal()
-  const banner = siteConfig('MAGZINE_HOME_BANNER_ENABLE')
+  const banner = CONFIG.MAGZINE_HOME_BANNER_ENABLE
   if (!banner) {
     return null
   }

@@ -8,8 +8,8 @@ import CONFIG from '../config'
  * @returns
  */
 export default function TouchMeCard() {
-  // 开关
-  if (!siteConfig('MAGZINE_SOCIAL_CARD', null, CONFIG)) {
+  // 个人站点：开关以主题本地配置为准，避免被 Notion_Config 默认值重新开启
+  if (!CONFIG.MAGZINE_SOCIAL_CARD) {
     return <></>
   }
 
