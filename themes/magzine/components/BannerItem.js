@@ -8,8 +8,8 @@ import CONFIG from '../config'
  * @returns
  */
 export default function BannerItem() {
-  // 首屏信息栏按钮文字
-  const banner = siteConfig('MAGZINE_HOME_BANNER_ENABLE', null, CONFIG)
+  // 个人站点：宣传位开关以主题本地配置为准，避免被 Notion_Config 默认值重新开启
+  const banner = CONFIG.MAGZINE_HOME_BANNER_ENABLE
   const button = siteConfig('MAGZINE_HOME_BUTTON', null, CONFIG)
   const text = siteConfig('MAGZINE_HOME_BUTTON_TEXT', null, CONFIG)
   const url = siteConfig('MAGZINE_HOME_BUTTON_URL', null, CONFIG)

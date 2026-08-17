@@ -6,8 +6,6 @@ import TagItemMini from './TagItemMini'
 
 /**
  * 文章详情页介绍
- * @param {*} props
- * @returns
  */
 export default function ArticleInfo(props) {
   const { post } = props
@@ -19,10 +17,7 @@ export default function ArticleInfo(props) {
           {siteConfig('MAGZINE_POST_LIST_CATEGORY') && (
             <CategoryItem category={post?.category} />
           )}
-          <div
-            className={
-              'flex min-w-0 flex-1 items-center justify-start flex-nowrap overflow-x-auto scroll-hidden gap-x-3 text-gray-400'
-            }>
+          <div className='flex min-w-0 flex-1 items-center justify-start flex-nowrap overflow-x-auto scroll-hidden gap-x-3 text-gray-400'>
             {siteConfig('MAGZINE_POST_LIST_TAG') &&
               post?.tagItems?.map(tag => (
                 <TagItemMini key={tag.name} tag={tag} />
@@ -30,7 +25,6 @@ export default function ArticleInfo(props) {
           </div>
         </div>
 
-        {/* title */}
         <h2 className='text-4xl text-center dark:text-gray-300'>
           {siteConfig('POST_TITLE_ICON') && (
             <NotionIcon icon={post?.pageIcon} />
@@ -42,14 +36,14 @@ export default function ArticleInfo(props) {
       </div>
 
       {post?.type && post?.type !== 'Page' && post?.pageCover && (
-        <div className='w-full aspect-video relative md:flex-shrink-0 overflow-hidden'>
+        <div className='w-full relative md:flex-shrink-0 overflow-hidden'>
           <LazyImage
             priority
             alt={post?.title}
             src={post?.pageCover}
             width={1200}
             height={675}
-            className='object-cover max-h-[60vh] w-full h-full'
+            className='object-cover max-h-[60vh] w-full'
           />
         </div>
       )}
